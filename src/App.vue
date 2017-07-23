@@ -2,7 +2,12 @@
   <div id="app">
 
     <img src="./assets/logo.png">
-    <router-link to="/custom" ><h3>To Custom Component</h3></router-link>
+<div class="container">
+
+    <router-link to="/" class="item" ><h3>To Hello Component</h3></router-link>
+    <router-link to="/custom" class="item" ><h3>To Custom Component</h3></router-link>
+    <router-link to="/posts" class="item" ><h3>To Posts Component</h3></router-link>
+</div>
     <router-view></router-view>
 
   </div>
@@ -23,4 +28,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .item{
+    display: flex;
+    margin: 25px;
+    padding: 10px;
+  }
+
 </style>
