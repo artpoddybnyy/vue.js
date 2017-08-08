@@ -4,7 +4,7 @@ import Hello from '@/components/Hello'
 import CustomHello from '@/components/CustomHello'
 import PostsComponent from '@/components/PostsComponent'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
