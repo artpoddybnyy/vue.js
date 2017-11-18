@@ -4,15 +4,15 @@
     <img src="./assets/logo.png">
 <div class="container">
 
-    <router-link to="/" class="item" ><h3>To Hello Component</h3></router-link>
-    <router-link to="/custom" class="item" ><h3>To Custom Component</h3></router-link>
-    <router-link to="/posts" class="item" ><h3>To Posts Component</h3></router-link>
+    <router-link to="/" class="item" ><button><h3>To Hello Component</h3></button></router-link>
+    <router-link to="/custom" class="item" ><button><h3>To Custom Component</h3></button></router-link>
+    <router-link to="/posts" class="item" ><button><h3>To Posts Component</h3></button></router-link>
+    <router-link to="/form" class="item" ><button><h3>To Home Work Form</h3></button></router-link>
+
 </div>
     <router-view></router-view>
-
   </div>
 </template>
-
 <script>
 export default {
   name: 'app'
@@ -36,6 +36,7 @@ export default {
     display: flex;
     margin: 25px;
     padding: 10px;
+    text-decoration: none;
   }
 
 </style>

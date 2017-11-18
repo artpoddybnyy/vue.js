@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form >
+    <form  >
       <label for="post-title" class="label"><h3>Post Title</h3>  </label>
       <input id="post-title" type="text" v-model="post.title" minlength="1" />
       <label for="post-body" class="label"><h3> Post Body </h3></label>

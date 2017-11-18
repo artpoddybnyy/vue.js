@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import CustomHello from '@/components/CustomHello'
 import PostsComponent from '@/components/PostsComponent'
+import HomeWorkForm from '@/components/HomeWorkForm'
+
 
 Vue.use(Router);
 
@@ -22,6 +24,11 @@ export default new Router({
       path: '/posts',
       name: 'PostsComponent',
       component: PostsComponent
+    },
+    {
+      path: '/form',
+      name: 'HomeWorkForm',
+      component: HomeWorkForm
     }
   ]
 })
