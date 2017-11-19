@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Artem Poddybnyy <artpoddybnyy@gmail.com>",
-  "private": true,
   "homepage": "https://github.com/artpoddybnyy/vue.js",
   "scripts": {
     "dev": "node build/dev-server.js",
