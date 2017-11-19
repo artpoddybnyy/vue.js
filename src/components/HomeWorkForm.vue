@@ -20,9 +20,9 @@
   </div>
 
 
-    <modal name="result">
-      <button @click.prevent="close">x</button>
-       <h3 >Меня зовут {{formResult.name}} мне {{formResult.age}} я проживаю в {{formResult.city }}e</h3>
+    <modal name="result" :clickToClose = false>
+      <button @click.prevent="close">close</button>
+       <div v-html="modalResult" class="result"></div>
    </modal>
 
   </div>
@@ -31,21 +31,21 @@
 <script>
   export default {
     name: 'form',
-    props: {
-      showModal: Boolean,
-      closeAction: Function,
-      containerClass: String
-    },
     data () {
       return {
         form: 'Form',
         cities: ['Харьков', 'Киев', 'Львов'],
-        formResult: {name: null, age: null, city: null}
+        formResult: {name: null, age: null, city: null},
+        modalResult: ''
       }
       },
         methods:{
           subForm () {
+            (this.formResult.name && this.formResult.age &&  this.formResult.city) === null ?  this.modalResult = '<h1> Что то пропущенно</h1>' :
+              this.modalResult = '<h3>Меня зовут '+ this.formResult.name +' мне '+ this.formResult.age+ ' я проживаю в '+ this.formResult.city +'e</h3>';
+
             this.$modal.show('result');
+
           },
           close () {
             this.$modal.hide('result');
@@ -89,7 +89,21 @@
   }
 
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #a07541;
   }
+
+  button {
+    float: right;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #06a08c;
+  }
+
+.v--modal-overlay[data-modal="result"] {
+  background: #dedede;
+
+}
 
 </style>
