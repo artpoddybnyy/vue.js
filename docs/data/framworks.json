@@ -1,24 +1,24 @@
-[
+
   {
     "angular": [
       "http://artemdemo.me/blog/wp-content/uploads/2015/05/angular2-red.png",
       "https://camo.githubusercontent.com/c3537d08b44e9432d2b2e1374c6529cde07c984a/687474703a2f2f692e696d6775722e636f6d2f43715863735a392e706e67",
       "https://i.ytimg.com/vi/-zW1zHqsdyc/maxresdefault.jpg"
-    ]
-  },
-  {
+    ],
+
+
     "react": [
       "https://www.barcelonacodeschool.com/wp-content/uploads/2017/08/react-js.png",
       "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/04/1493235373large_react_apps_A-01.png",
       "https://i.ytimg.com/vi/DiLVAXlVYR0/maxresdefault.jpg"
-    ]
-  },
-  {
+    ],
+
+
     "vue": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJVFP_NkplcGoSCexcRvv9xV64APqLhPHg2b2M4BFKx9T0TA9pg",
       "https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAyWAAAAJDQzMGI4N2ZlLTE5ZmUtNGIxZC1hMDRiLTkxNTFhOWI5YzIxZg.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7SYgd7_joGdpUV6BQUDxx7lC5KvN-ayMQyiZMIgCYl-HxIG9fg"
     ]
   }
-]
+
 
