@@ -31,6 +31,7 @@
       getPosts: function () {
         this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
           this.posts = response.body.splice(0, 5);
+          console.log(this.posts)
         }, response => {
           console.log(response)
         });

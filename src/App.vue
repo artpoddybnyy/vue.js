@@ -7,7 +7,7 @@
     <router-link to="/" class="item" ><button><h3>To Hello Component</h3></button></router-link>
     <router-link to="/custom" class="item" ><button><h3>To Custom Component</h3></button></router-link>
     <router-link to="/posts" class="item" ><button><h3>To Posts Component</h3></button></router-link>
-    <router-link to="/form" class="item" ><button><h3>To Home Work Form</h3></button></router-link>
+    <router-link to="/home-works" class="item" ><button><h3>To Home Work</h3></button></router-link>
 
 </div>
     <router-view></router-view>

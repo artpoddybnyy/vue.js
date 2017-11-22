@@ -1,9 +1,11 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import CustomHello from '@/components/CustomHello'
-import PostsComponent from '@/components/PostsComponent'
-import HomeWorkForm from '@/components/HomeWorkForm'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Hello from '@/components/Hello';
+import CustomHello from '@/components/CustomHello';
+import PostsComponent from '@/components/PostsComponent';
+import HomeWorks from '@/components/HomeWorks';
+import HomeWorkForm from '@/components/home-works/HomeWorkForm';
+import HomeWorkSlider from '@/components/home-works/HomeWorkSlider';
 
 
 Vue.use(Router);
@@ -26,9 +28,22 @@ export default new Router({
       component: PostsComponent
     },
     {
-      path: '/form',
-      name: 'HomeWorkForm',
-      component: HomeWorkForm
-    }
+      path: '/home-works',
+      name: 'HomeWorks',
+      component: HomeWorks,
+      children: [
+        {
+        path: '/form',
+        name: 'HomeWorkForm',
+        component: HomeWorkForm
+      },
+      {
+        path: '/slider',
+        name: 'HomeWorkSlider',
+        component: HomeWorkSlider
+      }
+      ]
+    },
+
   ]
 })
