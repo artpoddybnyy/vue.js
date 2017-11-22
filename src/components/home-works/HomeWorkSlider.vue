@@ -1,27 +1,21 @@
 
 <template>
-  <div>
-    <ul class="submenu">
-      <li>
-        <button @click="addToShow('angular')">angular</button>
-      </li>
-      <li>
-        <button @click="addToShow('react')">react</button>
-      </li>
-      <li>
-        <button @click="addToShow('vue')">vue</button>
-      </li>
-    </ul>
+  <div >
+    <div class="dropdown">
 
+        <button class="button button5" @click="addToShow('angular')">angular</button>
+        <button class="button button5" @click="addToShow('react')">react</button>
+        <button class="button button5" @click="addToShow('vue')">vue</button>
 
-    <div class="" v-show="toShow">
-      <button @click="prevIng">&#10094</button>
+    <div class="pic-holder" v-show="toShow">
+      <button class="button button5" @click="prevIng">&#10094</button>
       <img class="pic " :src="show[picIndex]">
-
-      <button @click="nextIng">&#10095</button>
+      <button  class="button button5" @click="nextIng">&#10095</button>
+    </div>
+    </div>
     </div>
 
-  </div>
+
 </template>
 
 <script>
@@ -60,11 +54,10 @@
       },
 
       getPictures () {
-        this.$http.get('https://artpoddybnyy.github.io/vue.js/data/framworks.json').then(data => {
+        this.$http.get('https://artpoddybnyy.github.io/test/framworks.json').then(data => {
          this.pictures = data.data;
         });
       },
-
     },
     created(){
       this.getPictures()
@@ -79,6 +72,29 @@
     width: 400px;
     /*transform: translateX(-50%);*/
   }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
 
+  .button5:hover {
+    background-color: #555555;
+    color: white;
+  }
 
 </style>
