@@ -1,15 +1,13 @@
 
 <template>
   <div >
-    <div class="dropdown">
-
+    <div>
         <button class="button button5" @click="addToShow('angular')">angular</button>
         <button class="button button5" @click="addToShow('react')">react</button>
         <button class="button button5" @click="addToShow('vue')">vue</button>
-
-    <div class="pic-holder" v-show="toShow">
+    <div class="pic-holder content" v-show="toShow">
       <button class="button button5" @click="prevIng">&#10094</button>
-      <img class="pic " :src="show[picIndex]">
+      <img class="pic slider" :src="show[picIndex]"  :class=" { slider2: slide}"  >
       <button  class="button button5" @click="nextIng">&#10095</button>
     </div>
     </div>
@@ -23,6 +21,7 @@
     name: 'slider',
     data () {
       return {
+        slide: false,
         picIndex: 0,
         pictures: {},
         show: [],
@@ -31,6 +30,7 @@
     },
     methods: {
       nextIng () {
+
         if (this.picIndex === this.show.length - 1) {
           this.picIndex = 0;
         } else {
@@ -38,6 +38,7 @@
         }
       },
       prevIng () {
+        this.slide =  !this.slide;
         if (this.picIndex === 0) {
           this.picIndex = this.show.length - 1;
         } else {
@@ -85,6 +86,7 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+
   }
   .button5 {
     background-color: white;
@@ -95,6 +97,13 @@
   .button5:hover {
     background-color: #555555;
     color: white;
+  }
+ .content {
+   display: flex;
+   justify-content: center;
+ }
+  .content button {
+    margin: 0;
   }
 
 </style>

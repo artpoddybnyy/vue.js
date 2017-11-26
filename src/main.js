@@ -6,11 +6,13 @@ import router from './router';
 import VueResource from 'vue-resource';
 import VueValidator from 'vue-form-validator';
 import VModal from 'vue-js-modal'
-
+import  Coverflow from 'vue-coverflow'
 
 Vue.use(VModal);
 Vue.use(VueValidator);
 Vue.use(VueResource);
+Vue.use(Coverflow);
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

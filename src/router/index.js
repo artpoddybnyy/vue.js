@@ -33,12 +33,12 @@ export default new Router({
       component: HomeWorks,
       children: [
         {
-        path: '/form',
+        path: 'form',
         name: 'HomeWorkForm',
         component: HomeWorkForm
       },
       {
-        path: '/slider',
+        path: 'slider',
         name: 'HomeWorkSlider',
         component: HomeWorkSlider
       }
