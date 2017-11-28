@@ -9,6 +9,9 @@
       <li>
         <router-link :to="{ name: 'HomeWorkSlider'}">Slider</router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'Search'}">Searching</router-link>
+      </li>
 
     </ul>
 

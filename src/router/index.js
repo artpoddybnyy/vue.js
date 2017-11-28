@@ -6,6 +6,7 @@ import PostsComponent from '@/components/PostsComponent';
 import HomeWorks from '@/components/HomeWorks';
 import HomeWorkForm from '@/components/home-works/HomeWorkForm';
 import HomeWorkSlider from '@/components/home-works/HomeWorkSlider';
+import Search from '@/components/home-works/Search';
 
 
 Vue.use(Router);
@@ -41,6 +42,10 @@ export default new Router({
         path: 'slider',
         name: 'HomeWorkSlider',
         component: HomeWorkSlider
+      }, {
+        path: 'custom-search',
+        name: 'Search',
+        component: Search
       }
       ]
     },
