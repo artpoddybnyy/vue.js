@@ -1,0 +1,24 @@
+
+.agile button {
+     background-color: transparent;
+     border: 1px solid #fff;
+   }
+
+.agile__arrow {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 80px;
+}
+
+.agile__arrow:hover {
+   background-color: wheat;
+  cursor: pointer;
+
+}
+.agile__arrow--next {
+  right: 0;
+}
+.agile__arrow--prev {
+  left: 0;
+}

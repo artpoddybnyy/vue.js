@@ -5,7 +5,7 @@
       <input style="width: auto; margin-left: 140px" id="posts-count" type="text" v-model="count"  minlength="1"/>
       <button @click.prevent="getPosts">Get posts</button>
     </form>
-    <form >
+    <form>
 
       <label for="post-title" class="label"><h3>Post Title</h3>  </label>
       <input id="post-title" type="text" v-model="post.title" minlength="1" />

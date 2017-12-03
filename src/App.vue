@@ -12,8 +12,6 @@
         <router-link to="/home-works" class="item" @click="activate">To Home Work</router-link>
       </div>
     </div>
-
-
     <router-view></router-view>
   </div>
 </template>
@@ -58,12 +56,13 @@
 
   .dropbtn {
     border-radius: 50%;
-    color: white;
+    color: #fff0b9;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     background-color: #35495e;
+
   }
 
   .dropdown {
@@ -71,6 +70,9 @@
     display: inline-block;
     left: 25px;
     top: 30px;
+  }
+  .dropbtn:hover {
+   background-color: black;
   }
 
   .dropdown-content {
