@@ -24,13 +24,15 @@
       return {
         searchValue: null,
         searchCountValue: 10,
-        links: this.$store.state.picLinks || [],
-        copyPicLinks:[]
+        links:  this.$store.state.picLinks || [],
+        copyPicLinks: [],
+        notFound: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/404-not-found-error-page-examples.png'
       }
     },
     methods: {
       searching() {
-
+        this.copyPicLinks.splice(0,  this.copyPicLinks.length);
+        this.links.splice(0,  this.links.length);
         this.$http.get('https://api.cognitive.microsoft.com/bing/v7.0/images/search?q='+
           this.searchValue + '&count='+ this.searchCountValue +'&offset=0&mkt=en-us&safeSearch=Moderate',
           {headers: {'Ocp-Apim-Subscription-Key': '012ea95b20724b8cab8b548c73c024e9'}})
@@ -38,7 +40,7 @@
             data.body.value.map((pic) =>{
               return new Promise ((resolve, reject) => {
                 let img = new Image ();
-                img.onerror = () => reject ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJVFP_NkplcGoSCexcRvv9xV64APqLhPHg2b2M4BFKx9T0TA9pg');
+                img.onerror = () => reject (this.notFound);
                 img.onload = () => resolve (pic.contentUrl);
                 img.src = pic.contentUrl
             }).then((data) => {
@@ -47,11 +49,10 @@
                 this.copyPicLinks.push(err)
               });
             });
-            this.links = this.copyPicLinks;
-        });
-        setTimeout(() => {
+
+          this.links = this.copyPicLinks;
           this.$store.commit('addLinks', this.links);
-        }, 2000);
+        });
       },
     },
     computed: {
