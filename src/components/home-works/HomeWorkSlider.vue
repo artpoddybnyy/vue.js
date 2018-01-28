@@ -22,7 +22,7 @@
       sliderOptions: {
         arrows: true,
         dots: false,
-        autoplay:true,
+        autoplay: false,
         timing: 'linear',
 //        fade:true,
         speed: 750,
@@ -58,6 +58,25 @@
     background-color: transparent;
     border: 1px solid #fff;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    img {
+      width: 800px;
+    }
+
+  }
+  @media screen and (max-width: 700px) {
+    img {
+      width: 500px;
+    }
+
+  }
+  @media screen and (max-width: 376px) {
+    img {
+      width: 300px;
+    }
+
   }
 
 </style>

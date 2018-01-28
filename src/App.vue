@@ -48,6 +48,9 @@
 
     background: #E3CAA1;
   }
+  *:focus {
+    outline: none;
+  }
 
   .logo {
     display: block;
@@ -78,9 +81,9 @@
   .dropdown-content {
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 110px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
+    left: -15px;
   }
 
   .dropdown-content a {
