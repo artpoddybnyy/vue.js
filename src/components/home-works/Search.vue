@@ -1,4 +1,4 @@
-
+﻿
 <template>
   <div>
     <form action.prevent="searching">
@@ -35,21 +35,17 @@
         this.links.splice(0,  this.links.length);
         this.$http.get('https://api.cognitive.microsoft.com/bing/v7.0/images/search?q='+
           this.searchValue + '&count='+ this.searchCountValue +'&offset=0&mkt=en-us&safeSearch=Moderate',
-          {headers: {'Ocp-Apim-Subscription-Key': '012ea95b20724b8cab8b548c73c024e9'}})
+          {headers: {'Ocp-Apim-Subscription-Key': 'af95ae0ddabd46f28b5c1e110ee85603'}})
           .then(data => {
-            data.body.value.map((pic) =>{
+            data.body.value.map(pic => {
               return new Promise ((resolve, reject) => {
                 let img = new Image ();
                 img.onerror = () => reject (this.notFound);
                 img.onload = () => resolve (pic.contentUrl);
-                img.src = pic.contentUrl
-            }).then((data) => {
-                this.copyPicLinks.push(data);
-              }).catch((err) => {
-                this.copyPicLinks.push(err)
-              });
+                img.src = pic.contentUrl})
+                .then(data => this.copyPicLinks.push(data))
+                .catch(err => this.copyPicLinks.push(err));
             });
-
           this.links = this.copyPicLinks;
           this.$store.commit('addLinks', this.links);
         });
@@ -119,6 +115,16 @@ button{
   box-sizing: border-box;
   border: 1px solid #35495e;
   border-radius: 10px;
+}
+@media screen and (max-width: 540px) {
+  .container-items {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container-items {
+    height: 200px;
+  }
 }
 
 </style>

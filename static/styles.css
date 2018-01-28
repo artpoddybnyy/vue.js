@@ -1,18 +1,15 @@
 
 .agile button {
      background-color: transparent;
-     border: 1px solid #fff;
+     border: none;
    }
 
 .agile__arrow {
-  position: absolute;
-  height: 100%;
-  top: 0;
   width: 80px;
 }
 
 .agile__arrow:hover {
-   background-color: wheat;
+
   cursor: pointer;
 
 }
@@ -24,4 +21,18 @@
 }
 .agile__slide {
   height: 700px;
+}
+@media screen and (max-width: 700px) {
+  .agile__arrow{
+    display: none;
+  }
+  .agile__slide {
+    height: 500px;
+  }
+  @media screen and (max-width: 376px) {
+    .agile__slide {
+      height: 300px;
+    }
+  }
+
 }
